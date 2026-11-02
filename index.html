@@ -384,7 +384,7 @@ summary:hover .q{transform:translateX(6px)}
 <body>
 <script>document.documentElement.classList.add('is-loading');document.documentElement.style.overflow='hidden'</script>
 <div class="loader" id="loader" role="status" aria-label="Nalaganje strani">
-  <img class="logo" src="assets/logo.png" alt="">
+  <img class="logo" src="logo.png" alt="">
   <div class="lr">
     <svg viewBox="0 0 200 200" aria-hidden="true">
       <defs><linearGradient id="lrGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f2"/><stop offset=".45" stop-color="#6c6e73"/><stop offset=".6" stop-color="#d9dadc"/><stop offset="1" stop-color="#3a3b3e"/></linearGradient></defs>
@@ -402,7 +402,7 @@ summary:hover .q{transform:translateX(6px)}
 </div>
 
 <header class="hdr" id="hdr">
-  <a href="#domov" aria-label="INOPOL d.o.o. – domov"><img class="logo" src="assets/logo.png" alt="INOPOL d.o.o."></a>
+  <a href="#domov" aria-label="INOPOL d.o.o. – domov"><img class="logo" src="logo.png" alt="INOPOL d.o.o."></a>
   <nav class="nav" id="nav" aria-label="Glavna navigacija">
     <a href="#o-nas">Več o Inopolu</a>
     <a href="#storitve">Tehnologija</a>
@@ -423,7 +423,7 @@ summary:hover .q{transform:translateX(6px)}
 <main>
 <section class="stage-wrap" id="domov" aria-label="Kovina v novi dimenziji">
   <div class="stage" id="stage">
-    <img class="floor" id="floor" src="assets/floor.jpg" alt="">
+    <img class="floor" id="floor" src="floor.jpg" alt="">
     <div class="stage-fade"></div>
     <div class="glow" id="glow"></div>
     <canvas id="refl" aria-hidden="true"></canvas>
@@ -624,7 +624,7 @@ summary:hover .q{transform:translateX(6px)}
 <footer class="cta band" id="kontakt">
   <div class="cta-grid">
     <div class="cta-main">
-      <img class="logo" src="assets/logo.png" alt="INOPOL d.o.o.">
+      <img class="logo" src="logo.png" alt="INOPOL d.o.o.">
       <h2><span class="g">Imate risbo ali idejo?</span><br>Pogovorimo se<span class="red">.</span></h2>
       <div class="btn-row"><a class="pill white" href="mailto:info@inopol.si">Pošljite povpraševanje <svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a></div>
     </div>
@@ -658,7 +658,7 @@ summary:hover .q{transform:translateX(6px)}
     document.querySelectorAll('.logo').forEach(l=>{l.src=url;l.classList.add('ready')});
   };
   src.onerror=()=>document.querySelectorAll('.logo').forEach(l=>l.classList.add('ready'));
-  src.src='assets/logo.png';
+  src.src='logo.png';
 })();
 </script>
 <script>
@@ -824,7 +824,7 @@ const geo=ringGeometry();
 
 const tl=new THREE.TextureLoader();
 let texDone=0;const texTick=()=>{texDone++;window.inopolProgress?.('tex',texDone/3)};
-const tex=n=>{const t=tl.load(`assets/${n}`,texTick,undefined,texTick);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=8;return t};
+const tex=n=>{const t=tl.load(`${n}`,texTick,undefined,texTick);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=8;return t};
 const uniforms={
   tRaw:{value:tex('tex3.jpg')},tMatte:{value:tex('tex4.jpg')},tPol:{value:tex('tex1.jpg')},
   uStage:{value:2},uGloss:{value:0},uGlow:{value:0},uTime:{value:0},uBump:{value:.06}
