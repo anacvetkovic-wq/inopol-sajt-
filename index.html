@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="INOPOL d.o.o. – fino elektropoliranje inoxa ter celovita površinska in strojna obdelava kovin. Grosuplje, Slovenija.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="INOPOL – Kovina v novi dimenziji">
+<meta property="og:description" content="Fino elektropoliranje inoxa ter celovita površinska in strojna obdelava kovin.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23000%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%23e2231a%27 stroke-width=%274%27/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>INOPOL – Kovina v novi dimenziji</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap">
+<style>
+/* Layout: one sticky WebGL stage carries hero → three-step surface story → series; white service cards, FAQ and a big CTA footer follow. */
+:root{
+  --ink:#09090a;          /* page ground, near-black with a cold bias */
+  --ink-2:#141416;        /* raised dark surface */
+  --steel:#8a8c91;        /* secondary text, the grey "KOVINA." */
+  --mist:#c8cacd;         /* body text on dark */
+  --paper:#f3f3f1;        /* white service cards */
+  --white:#ffffff;
+  --red:#e2231a;          /* INOPOL red, from the logo */
+  --line:rgba(255,255,255,.14);
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Geist","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  --ease:cubic-bezier(.2,.7,.1,1);
+  color-scheme:dark;
+}
+html{background:var(--ink)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--ink);color:var(--mist);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:6px}
+.red{color:var(--red)}
+.mono{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);font-stretch:108%;font-weight:800;color:var(--white);letter-spacing:-.035em;line-height:.9;margin:0;text-wrap:balance}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;z-index:50;top:env(safe-area-inset-top,0px);left:0;right:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:22px;padding-left:max(28px,var(--gutter));padding-right:max(28px,var(--gutter-r));transition:padding .4s var(--ease),background .4s}
+.hdr.compact{padding-block:12px;background:linear-gradient(rgba(9,9,10,.85),rgba(9,9,10,0))}
+.logo{display:block;height:26px;width:auto;opacity:0;transition:opacity .4s}
+.logo.ready{opacity:1}
+.nav{display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;background:rgba(22,22,24,.55);border:1px solid var(--line);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%)}
+.nav a{font-size:13px;font-weight:500;color:#e9e9ea;padding:8px 14px;border-radius:999px;transition:background .25s,color .25s}
+.nav a:hover{background:rgba(255,255,255,.08)}
+.nav .nav-cta{background:var(--white);color:#0b0b0c;font-weight:600;padding:8px 18px;margin-left:6px}
+.nav .nav-cta:hover{background:#e6e6e4}
+.hdr-right{justify-self:end;display:flex;align-items:center;gap:14px}
+.lang{display:flex;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{padding:5px 9px;border-radius:999px;color:var(--steel)}
+.lang button[aria-pressed="true"]{background:rgba(255,255,255,.1);color:var(--white)}
+.menu-btn{display:none;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+@media (max-width:980px){
+  .hdr{grid-template-columns:1fr auto}
+  .nav{display:none}
+  .menu-btn{display:block}
+  .hdr.open .nav{display:flex;position:fixed;top:calc(env(safe-area-inset-top,0px) + 70px);left:var(--gutter);right:var(--gutter-r);flex-direction:column;align-items:stretch;border-radius:20px;padding:10px;background:rgba(18,18,20,.94)}
+  .hdr.open .nav a{padding:14px 16px;font-size:16px}
+  .hdr.open .nav .nav-cta{margin:6px 0 0;text-align:center}
+}
+
+/* ---------- sticky stage ---------- */
+.stage-wrap{position:relative;height:620vh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate;background:#000}
+.floor{position:absolute;left:0;width:100%;top:22%;height:100%;object-fit:cover;object-position:50% 0;z-index:0;will-change:opacity}
+.stage-fade{position:absolute;inset:auto 0 0;height:22%;background:linear-gradient(transparent,var(--ink));z-index:1}
+#gl,#refl{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+#refl{z-index:2;opacity:.42;filter:blur(1.5px);-webkit-mask-image:linear-gradient(to bottom,transparent var(--my,60%),#000 var(--my,60%),transparent calc(var(--my,60%) + 26%));mask-image:linear-gradient(to bottom,transparent var(--my,60%),#000 var(--my,60%),transparent calc(var(--my,60%) + 26%))}
+#gl{opacity:0;transition:opacity 1.2s var(--ease)}
+#gl.ready{opacity:1}
+.glow{position:absolute;z-index:2;left:0;top:0;width:300px;height:60px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.34),rgba(255,255,255,.08) 60%,transparent);filter:blur(8px);opacity:0;transform:translate(-50%,-50%);pointer-events:none}
+
+.leaders{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none;overflow:visible}
+.leaders polyline{fill:none;stroke:rgba(255,255,255,.55);stroke-width:1}
+.leaders circle{fill:var(--white)}
+.leaders g{transition:opacity .45s}
+.tag{position:absolute;z-index:5;left:0;top:0;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:rgba(16,16,18,.82);border:1px solid var(--line);padding:6px 10px;border-radius:6px;white-space:nowrap;transition:opacity .45s;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.off{opacity:0!important;pointer-events:none}
+
+.layer{position:absolute;z-index:6;transition:opacity .7s var(--ease),transform .9s var(--ease)}
+.layer.off{transform:translateY(18px)}
+
+.hero-copy{left:max(40px,var(--gutter));top:clamp(110px,17vh,170px);max-width:560px}
+.hero-copy h1{font-size:clamp(48px,min(7.2vw,10vh),124px)}
+.hero-copy p{text-shadow:0 1px 18px rgba(0,0,0,.9)}
+/* desktop: the copy sits on the dark sky, its bottom edge just above the floor's light line */
+@media (min-width:761px){.hero-copy{top:auto;bottom:calc(100% - var(--hz,62%) + 44px)}}
+.hero-copy h1,.hero-copy p,.hero-copy .btn-row{transition:opacity 1s var(--ease),transform 1.3s var(--ease)}
+.hero-copy p{transition-delay:.15s}.hero-copy .btn-row{transition-delay:.28s}
+.is-loading .hero-copy h1,.is-loading .hero-copy p,.is-loading .hero-copy .btn-row{opacity:0;transform:translateY(46px)}
+.is-loading .tag,.is-loading .leaders,.is-loading .scroll-cue{opacity:0}
+
+/* ---------- loader ---------- */
+.loader{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-items:center;clip-path:inset(0 0 0 0);transition:clip-path 1.1s cubic-bezier(.7,0,.2,1) .35s}
+.loader.done{clip-path:inset(0 0 100% 0)}
+.loader .logo{position:absolute;top:calc(22px + env(safe-area-inset-top,0px));left:max(28px,var(--gutter))}
+.lr{display:grid;justify-items:center;gap:28px}
+.lr svg{width:min(52vw,250px);height:auto;overflow:visible;transition:transform 1.3s var(--ease),opacity .8s var(--ease)}
+.loader.done .lr svg{transform:scale(1.6) rotate(50deg);opacity:0}
+.lr-track{fill:none;stroke:rgba(255,255,255,.07);stroke-width:14}
+.lr-band{fill:none;stroke:url(#lrGrad);stroke-width:14;stroke-dasharray:1;stroke-dashoffset:1}
+.lr-edge{fill:none;stroke:rgba(255,255,255,.55);stroke-width:.8;stroke-dasharray:1;stroke-dashoffset:1}
+.lr-count{font-family:var(--f-display);font-stretch:100%;font-weight:800;font-size:46px;letter-spacing:-.03em;color:var(--white);line-height:1;font-variant-numeric:tabular-nums}
+.lr-count small{font-family:var(--f-mono);font-weight:400;font-size:12px;color:var(--steel);margin-left:4px;letter-spacing:.06em}
+.lr-cap{color:var(--steel)}
+.lr-count,.lr-cap{transition:opacity .5s,transform .7s var(--ease)}
+.loader.done .lr-count,.loader.done .lr-cap{opacity:0;transform:translateY(-14px)}
+.hero-copy h1 .g{color:var(--steel)}
+.hero-copy p{margin:26px 0 30px;max-width:34ch;font-size:16px;color:var(--mist)}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:12px 20px;border-radius:999px;transition:transform .3s var(--ease),background .3s}
+.pill:hover{transform:translateY(-2px)}
+.pill.white{background:var(--white);color:#0b0b0c}
+.pill.glass{background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--white);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.pill svg{width:14px;height:14px}
+.scroll-cue{left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;align-items:center;gap:10px;color:var(--steel)}
+.scroll-cue i{display:block;width:1px;height:34px;background:linear-gradient(var(--white),transparent);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.scroll-cue.off{transform:translateX(-50%) translateY(12px)}
+
+.chapter{max-width:360px}
+.chapter .k{color:var(--red);display:block;margin-bottom:16px}
+.chapter h2{font-size:clamp(30px,3.3vw,50px)}
+.chapter p{margin:16px 0 0;color:var(--mist);font-size:15px}
+.chapter.center{left:50%;top:50%;transform:translate(-50%,-46%);text-align:center}
+.chapter.center.off{transform:translate(-50%,-38%)}
+.chapter.side{left:max(40px,var(--gutter));top:50%;transform:translateY(-50%)}
+.chapter.side.off{transform:translateY(-44%)}
+.finish{display:inline-flex;margin-top:22px;padding:4px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.finish button{font-size:13px;font-weight:500;padding:8px 16px;border-radius:999px;color:var(--steel);transition:background .3s,color .3s}
+.finish button[aria-pressed="true"]{background:var(--white);color:#0b0b0c}
+
+.echo-copy{left:max(40px,var(--gutter));top:50%;transform:translateY(-50%);max-width:460px}
+.echo-copy.off{transform:translateY(-44%)}
+.echo-copy h2{font-size:clamp(36px,4.4vw,72px)}
+.echo-copy h2 .g{color:var(--steel)}
+.echo-copy p{margin:22px 0 0;max-width:32ch}
+
+.story-ui{left:max(40px,var(--gutter));right:max(40px,var(--gutter-r));bottom:calc(26px + env(safe-area-inset-bottom,0px));display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.chap-nav{display:flex;gap:26px}
+.chap-nav button{display:flex;flex-direction:column;gap:10px;min-width:96px;text-align:left;font-size:13px;color:var(--steel);transition:color .3s}
+.chap-nav button b{font-family:var(--f-mono);font-weight:500;font-size:11px;letter-spacing:.1em}
+.chap-nav button i{display:block;height:1px;background:var(--line);position:relative;overflow:hidden}
+.chap-nav button i::after{content:"";position:absolute;inset:0;background:var(--white);transform:scaleX(var(--f,0));transform-origin:left}
+.chap-nav button.on{color:var(--white)}
+.ra{text-align:right}
+.ra small{display:block;color:var(--steel);margin-bottom:6px}
+.ra strong{font-family:var(--f-display);font-stretch:100%;font-weight:700;font-size:34px;color:var(--white);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.ra strong span{font-family:var(--f-mono);font-size:12px;font-weight:400;color:var(--steel);margin-left:6px;letter-spacing:.04em}
+
+@media (max-width:760px){
+  .hero-copy{top:calc(96px + env(safe-area-inset-top,0px));right:var(--gutter-r)}
+  .hero-copy p{margin:18px 0 22px;font-size:15px}
+  .chapter.center,.chapter.side,.echo-copy{left:var(--gutter);right:var(--gutter-r);top:auto;bottom:calc(120px + env(safe-area-inset-bottom,0px));transform:none;text-align:left;max-width:none}
+  .chapter.center.off,.chapter.side.off,.echo-copy.off{transform:translateY(14px)}
+  .story-ui{left:var(--gutter);right:var(--gutter-r)}
+  .chap-nav{gap:12px}
+  .chap-nav button{min-width:0;flex:1}
+  .ra strong{font-size:24px}
+  .tag{font-size:9.5px;padding:5px 8px}
+  .scroll-cue span{display:none}
+}
+
+/* ---------- services ---------- */
+.band{padding-left:max(40px,var(--gutter));padding-right:max(40px,var(--gutter-r))}
+.services{position:relative;padding-block:120px 130px;background:linear-gradient(var(--ink),#18181a)}
+.sec-head{text-align:center;margin-bottom:64px}
+.sec-head .mono{color:var(--steel);display:block;margin-bottom:18px}
+.sec-head h2{font-size:clamp(46px,6.4vw,104px)}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1360px;margin:0 auto}
+.card{position:relative;display:flex;flex-direction:column;min-height:360px;padding:28px 26px 24px;border-radius:24px;background:var(--paper);color:#4a4b4f;transition:transform .5s var(--ease),box-shadow .5s;transform-style:preserve-3d}
+.card:hover,.card:focus-visible{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.card h3{color:#0b0b0c;font-size:clamp(26px,2.2vw,34px);line-height:.92}
+.card p{margin:18px 0 0;font-size:14.5px;line-height:1.5}
+.card .meta{margin-top:auto;padding-top:28px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.card .meta .mono{color:#7a7b80;font-size:10px;line-height:1.5}
+.card .num{font-family:var(--f-display);font-stretch:100%;font-weight:800;font-size:clamp(56px,5vw,78px);line-height:.8;letter-spacing:-.05em;color:#0b0b0c;transition:color .35s;font-variant-numeric:tabular-nums}
+.card:hover .num,.card:focus-visible .num{color:var(--red)}
+.card .arrow{position:absolute;top:24px;right:24px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(0,0,0,.12);transition:background .35s,color .35s,transform .35s var(--ease)}
+.card .arrow svg{width:13px;height:13px}
+.card:hover .arrow{background:#0b0b0c;color:var(--white);transform:rotate(45deg)}
+.card h3{padding-right:40px}
+@media (max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cards{grid-template-columns:minmax(0,1fr)}.card{min-height:300px}.services{padding-block:100px 80px}}
+
+/* ---------- FAQ ---------- */
+.faq{padding-block:120px 130px;background:linear-gradient(#1c1c1e,#232325 60%,#151517)}
+.faq-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:56px}
+.faq-inner h2{font-size:clamp(38px,4.4vw,64px)}
+.faq-inner .lead{margin:18px 0 0;max-width:30ch}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;font-size:17px;font-weight:500;color:var(--white)}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .4s var(--ease),background .3s}
+summary .pm svg{width:11px;height:11px}
+details[open] summary .pm{transform:rotate(45deg);background:rgba(255,255,255,.08)}
+details p{margin:0;padding:0 48px 24px 0;max-width:64ch;color:var(--mist);font-size:15px}
+details::details-content{block-size:0;overflow:hidden;transition:block-size .45s var(--ease),content-visibility .45s allow-discrete}
+details[open]::details-content{block-size:auto}
+@supports (interpolate-size:allow-keywords){:root{interpolate-size:allow-keywords}}
+@media (max-width:820px){.faq-inner{grid-template-columns:minmax(0,1fr);gap:28px}}
+
+/* ---------- footer CTA ---------- */
+.cta{padding-block:110px 36px;background:linear-gradient(#151517,#050506)}
+.cta-grid{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,.5fr));gap:40px}
+.cta .logo{height:24px;margin-bottom:34px}
+.cta h2{font-size:clamp(34px,4.2vw,64px);line-height:.95}
+.cta h2 .g{color:var(--steel)}
+.cta .btn-row{margin-top:34px}
+.col h4{margin:6px 0 14px;font-family:var(--f-mono);font-weight:400;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.col a,.col span{display:block;padding:4px 0;font-size:14px;color:#e4e4e5}
+.col a:hover{color:var(--white);text-decoration:underline;text-underline-offset:4px}
+.legal{max-width:1360px;margin:90px auto 0;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--steel)}
+@media (max-width:980px){.cta-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cta-main{grid-column:1/-1}}
+@media (max-width:560px){.cta-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- about ---------- */
+.about{padding-block:140px 40px;background:var(--ink)}
+.about-grid{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:64px;align-items:end}
+.about h2{font-size:clamp(34px,4.2vw,64px);line-height:.98}
+.about h2 .g{color:var(--steel)}
+.about-copy p{margin:0 0 16px;max-width:52ch}
+.eyebrow{display:block;color:var(--steel);margin-bottom:22px}
+.facts{max-width:1360px;margin:80px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.fact{padding:26px 26px 0 0;border-top:1px solid var(--line);margin-right:24px}
+.fact strong{display:block;font-family:var(--f-display);font-stretch:100%;font-weight:800;font-size:clamp(40px,4vw,60px);line-height:1;letter-spacing:-.04em;color:var(--white);font-variant-numeric:tabular-nums}
+.fact strong em{font-style:normal;color:var(--red)}
+.fact span{display:block;margin-top:12px;font-size:14px;color:var(--steel);max-width:24ch}
+@media (max-width:900px){.about-grid{grid-template-columns:minmax(0,1fr);gap:28px}.facts{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}}
+
+/* ---------- products ---------- */
+.products{padding-block:30px 140px;background:#18181a}
+.prod-list{max-width:1360px;margin:0 auto;display:grid;gap:18px}
+.prod{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#111113}
+.drawing{position:relative;min-height:380px;background-color:#0c0c0d;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:24px 24px;display:grid;place-items:center;padding:30px;border-right:1px solid var(--line)}
+.drawing svg{width:100%;max-width:440px;height:auto}
+.drawing svg .ln{fill:none;stroke:#d7d8da;stroke-width:1.3}
+.drawing svg .thin{fill:none;stroke:#8a8c91;stroke-width:.8}
+.drawing svg .ax{fill:none;stroke:#8a8c91;stroke-width:.8;stroke-dasharray:10 4 2 4}
+.drawing svg .dim{fill:none;stroke:var(--red);stroke-width:1}
+.drawing svg text{font-family:var(--f-mono);font-size:11px;fill:#c8cacd;letter-spacing:.08em}
+.drawing svg text.r{fill:var(--red)}
+.drawing .stamp{position:absolute;left:18px;bottom:16px;color:#6f7176}
+.prod-body{padding:44px 44px 40px;display:flex;flex-direction:column}
+.prod-body .mono{color:var(--red)}
+.prod-body h3{font-size:clamp(30px,3vw,46px);margin:16px 0 18px}
+.prod-body>p{margin:0;max-width:48ch}
+.spec{margin:auto 0 0;padding-top:34px;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:28px}
+.spec dt,.spec dd{margin:0;padding:12px 0;border-top:1px solid var(--line);font-size:14px}
+.spec dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);padding-top:15px}
+.spec dd{color:#e4e4e5}
+@media (max-width:900px){.prod{grid-template-columns:minmax(0,1fr)}.drawing{border-right:0;border-bottom:1px solid var(--line);min-height:300px}.prod-body{padding:30px 24px}}
+
+/* ---------- industries ---------- */
+.industries{padding-block:20px 120px;background:#18181a;overflow:hidden}
+.industries .eyebrow{text-align:center}
+.marquee{display:flex;width:max-content;animation:slide 48s linear infinite}
+.marquee span{font-family:var(--f-display);font-stretch:112%;font-weight:800;font-size:clamp(38px,5vw,80px);letter-spacing:-.03em;line-height:1;padding-right:.5em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.32)}
+.marquee span b{color:var(--red);-webkit-text-stroke:0;font-weight:800;padding-left:.5em}
+.industries:hover .marquee{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- quality ---------- */
+.quality{padding-block:120px;background:linear-gradient(#18181a,#1c1c1e)}
+.q-grid{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:64px}
+.quality h2{font-size:clamp(34px,4.2vw,64px)}
+.quality .lead{margin:20px 0 0;max-width:40ch}
+.q-list{display:grid}
+.q-item{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.q-item:last-child{border-bottom:1px solid var(--line)}
+.q-item h3{font-family:var(--f-body);font-stretch:100%;font-weight:600;font-size:17px;letter-spacing:0;line-height:1.3;display:flex;gap:12px;align-items:baseline}
+.q-item h3::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--red);transform:translateY(-2px)}
+.q-item p{margin:0;font-size:15px}
+.eu{margin-top:26px;font-size:13px;color:var(--steel);max-width:60ch}
+@media (max-width:900px){.q-grid{grid-template-columns:minmax(0,1fr);gap:36px}.q-item{grid-template-columns:minmax(0,1fr);gap:8px}}
+
+/* ---------- careers ---------- */
+.careers{padding-block:0;background:#151517}
+.careers-inner{max-width:1360px;margin:0 auto;padding-block:44px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.careers-inner h3{font-size:clamp(24px,2.4vw,34px);line-height:1}
+.careers-inner p{margin:10px 0 0;color:var(--steel);font-size:14px}
+
+/* ---------- motion: reveals, drawings, hovers ---------- */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .rh{clip-path:inset(0 0 100% 0);transform:translateY(.35em);transition:clip-path 1.1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .rh.in{clip-path:inset(-10% -5% -15% -5%);transform:none}
+.js .drawing [pathLength]{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s var(--ease);transition-delay:var(--d,0s)}
+.js .drawing.in [pathLength]{stroke-dashoffset:0}
+.js .drawing .ax,.js .drawing text,.js .drawing circle[fill],.js .drawing .stamp{opacity:0;transition:opacity .8s var(--ease);transition-delay:calc(var(--d,0s) + .6s)}
+.js .drawing.in .ax,.js .drawing.in text,.js .drawing.in circle[fill],.js .drawing.in .stamp{opacity:1}
+.drawing svg{transition:transform .8s var(--ease)}
+.drawing .dim{transition:stroke-width .3s}
+.prod:hover .drawing .dim{stroke-width:1.6}
+.spec dd{transition:transform .4s var(--ease),color .3s}
+.spec dt:hover+dd,.spec dd:hover{transform:translateX(6px);color:var(--white)}
+.prod{transition:border-color .4s}
+.prod:hover{border-color:rgba(255,255,255,.26)}
+
+.fact{position:relative;transition:transform .5s var(--ease)}
+.fact::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
+.fact:hover::before{transform:scaleX(1)}
+.fact:hover{transform:translateY(-4px)}
+.fact strong{transition:color .3s}
+.fact:hover strong{color:var(--red)}
+.fact:hover strong em{color:var(--white)}
+
+.card{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s var(--ease),box-shadow .5s,opacity .9s var(--ease)}
+.card:hover,.card:focus-visible{transform:perspective(900px) translateY(-8px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(226,35,26,.10),transparent 45%);opacity:0;transition:opacity .4s}
+.card:hover::after{opacity:1}
+.js .card.rv:not(.in){transform:perspective(900px) translateY(40px)}
+
+.q-item{transition:padding .5s var(--ease),background .5s}
+.q-item h3::before{transition:transform .4s var(--ease),box-shadow .4s}
+.q-item:hover{padding-left:14px;background:linear-gradient(90deg,rgba(255,255,255,.035),transparent 70%)}
+.q-item:hover h3::before{transform:translateY(-2px) scale(1.6);box-shadow:0 0 0 5px rgba(226,35,26,.18)}
+summary span:first-child,summary{transition:color .3s}
+summary:hover .pm{background:rgba(255,255,255,.1)}
+summary .q{transition:transform .4s var(--ease)}
+summary:hover .q{transform:translateX(6px)}
+.col a{transition:color .3s,transform .4s var(--ease)}
+.col a:hover{transform:translateX(4px)}
+.pill{will-change:transform}
+
+/* ---------- phone pass: tighter gutters, smaller type, no callouts over the ring ---------- */
+@media (max-width:760px){
+  .hdr{padding-block:14px;padding-left:max(18px,var(--gutter));padding-right:max(18px,var(--gutter-r))}
+  .hdr .logo{height:21px}
+  .lang button{padding:4px 7px}
+  .hero-copy{left:max(20px,var(--gutter));right:max(20px,var(--gutter-r));top:calc(84px + env(safe-area-inset-top,0px))}
+  .hero-copy h1{font-size:clamp(38px,11.5vw,54px)}
+  .hero-copy p{font-size:14.5px;margin:14px 0 18px;max-width:30ch}
+  .pill{font-size:13px;padding:11px 16px;gap:8px}
+  .btn-row{gap:8px}
+  .tag,.leaders{display:none}
+  .chapter.center,.chapter.side,.echo-copy{left:max(20px,var(--gutter));right:max(20px,var(--gutter-r));bottom:calc(108px + env(safe-area-inset-bottom,0px))}
+  .chapter h2{font-size:28px}
+  .chapter .k{margin-bottom:10px}
+  .chapter p{font-size:14px;margin-top:10px}
+  .finish{margin-top:14px}
+  .echo-copy h2{font-size:34px}
+  .echo-copy p{font-size:14px;margin-top:12px}
+  .story-ui{left:max(20px,var(--gutter));right:max(20px,var(--gutter-r));gap:14px}
+  .chap-nav button{font-size:12px;gap:8px}
+  .ra small{display:none}
+  .ra strong{font-size:22px}
+  .stage-wrap{height:540vh}
+  .band{padding-left:max(20px,var(--gutter));padding-right:max(20px,var(--gutter-r))}
+  .sec-head{margin-bottom:40px}
+  .about{padding-block:100px 20px}
+  .facts{margin-top:52px}
+  .fact{margin-right:14px;padding-top:20px}
+  .fact strong{font-size:34px}
+  .products{padding-block:10px 100px}
+  .prod-body h3{font-size:28px}
+  .drawing{min-height:250px;padding:18px}
+  .card{min-height:0}
+  .card .num{font-size:56px}
+  .industries{padding-block:10px 90px}
+  .quality,.faq{padding-block:90px}
+  summary{font-size:16px;padding:18px 0}
+  details p{padding-right:0}
+  .careers-inner{padding-block:36px}
+  .cta{padding-block:80px 28px}
+  .cta-grid{gap:30px 20px}
+  .legal{margin-top:56px;font-size:10px}
+  .loader .logo{height:21px;left:max(18px,var(--gutter));top:calc(14px + env(safe-area-inset-top,0px))}
+}
+
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<script>document.documentElement.classList.add('is-loading');document.documentElement.style.overflow='hidden'</script>
+<div class="loader" id="loader" role="status" aria-label="Nalaganje strani">
+  <img class="logo" src="assets/logo.png" alt="">
+  <div class="lr">
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <defs><linearGradient id="lrGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f2"/><stop offset=".45" stop-color="#6c6e73"/><stop offset=".6" stop-color="#d9dadc"/><stop offset="1" stop-color="#3a3b3e"/></linearGradient></defs>
+      <circle class="lr-track" cx="100" cy="100" r="73"/>
+      <g transform="rotate(-90 100 100)">
+        <circle class="lr-band" id="lrBand" cx="100" cy="100" r="73" pathLength="1"/>
+        <circle class="lr-edge" id="lrOut" cx="100" cy="100" r="80" pathLength="1"/>
+        <circle class="lr-edge" id="lrIn" cx="100" cy="100" r="66" pathLength="1"/>
+      </g>
+      <g id="lrHead"><line x1="100" y1="12" x2="100" y2="24" stroke="#e2231a" stroke-width="2"/><circle cx="100" cy="27" r="3" fill="#e2231a"/></g>
+    </svg>
+    <div class="lr-count"><span id="lrNum">000</span><small>%</small></div>
+    <div class="lr-cap mono">Oblika · Čistost · Površina</div>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
+  <a href="#domov" aria-label="INOPOL d.o.o. – domov"><img class="logo" src="assets/logo.png" alt="INOPOL d.o.o."></a>
+  <nav class="nav" id="nav" aria-label="Glavna navigacija">
+    <a href="#o-nas">Več o Inopolu</a>
+    <a href="#storitve">Tehnologija</a>
+    <a href="#izdelki">Naši izdelki</a>
+    <a href="#kakovost">Projekti</a>
+    <a href="#kariera">Kariera</a>
+    <a class="nav-cta" href="#kontakt">Kontakt</a>
+  </nav>
+  <div class="hdr-right">
+    <div class="lang" role="group" aria-label="Jezik">
+      <button type="button" aria-pressed="true">SL</button>
+      <button type="button" aria-pressed="false" title="Angleška različica sledi">EN</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Meni +</button>
+  </div>
+</header>
+
+<main>
+<section class="stage-wrap" id="domov" aria-label="Kovina v novi dimenziji">
+  <div class="stage" id="stage">
+    <img class="floor" id="floor" src="assets/floor.jpg" alt="">
+    <div class="stage-fade"></div>
+    <div class="glow" id="glow"></div>
+    <canvas id="refl" aria-hidden="true"></canvas>
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <svg class="leaders" id="leaders" aria-hidden="true">
+      <g id="lnA"><polyline points=""/><circle r="3"/></g>
+      <g id="lnB"><polyline points=""/><circle r="3"/></g>
+    </svg>
+    <span class="tag" id="tagA">Natančnost v vsakem sloju</span>
+    <span class="tag" id="tagB">Inox AISI 316L</span>
+
+    <div class="layer hero-copy" id="hero">
+      <h1><span class="g">KOVINA.</span><br>V NOVI<br>DIMENZIJI<span class="red">.</span></h1>
+      <p>Oblikujemo kovino. Izpopolnjujemo površino. Za izdelke, pri katerih šteje vsaka podrobnost.</p>
+      <div class="btn-row">
+        <a class="pill white" href="#kontakt">Pošljite povpraševanje <svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+        <button class="pill glass" type="button" data-go="0.32">Poglejte postopek</button>
+      </div>
+    </div>
+    <div class="layer scroll-cue mono" id="cue"><span>Pomaknite se</span><i></i></div>
+
+    <div class="layer chapter center off" id="ch0">
+      <span class="k mono">01 — Oblika</span>
+      <h2>Vse se začne z natančnostjo<span class="red">.</span></h2>
+      <p>Struženje, rezkanje in izvleki dajo kovini obliko. Vsaka poteza sledi vaši tehnični risbi.</p>
+    </div>
+    <div class="layer chapter side off" id="ch1">
+      <span class="k mono">02 — Čistost</span>
+      <h2>Čista osnova<span class="red">.</span></h2>
+      <p>Kemično čiščenje in brušenje odstranita oksidne plasti, nečistoče in sledi obdelave. Površina je pripravljena na zadnji korak.</p>
+    </div>
+    <div class="layer chapter side off" id="ch2">
+      <span class="k mono">03 — Površina</span>
+      <h2>Razlika je na površini<span class="red">.</span></h2>
+      <p>Elektropoliranje zgladi mikroprofil inoxa. Površina je gladkejša, čistejša in bolj odporna proti koroziji.</p>
+      <div class="finish" role="group" aria-label="Končni videz">
+        <button type="button" data-gloss="0" aria-pressed="true">Saten</button>
+        <button type="button" data-gloss="1" aria-pressed="false">Visoki sijaj</button>
+      </div>
+    </div>
+    <div class="layer echo-copy off" id="echo">
+      <h2><span class="g">OD ENEGA KOSA</span><br>DO SERIJE<span class="red">.</span></h2>
+      <p>Enak standard pri prvem in pri tisočem kosu. Prototip, mala serija ali redna proizvodnja.</p>
+    </div>
+
+    <div class="layer story-ui off" id="storyUi">
+      <div class="chap-nav">
+        <button type="button" data-go="0.33" data-c="0"><b>01</b>Oblika<i></i></button>
+        <button type="button" data-go="0.56" data-c="1"><b>02</b>Čistost<i></i></button>
+        <button type="button" data-go="0.77" data-c="2"><b>03</b>Površina<i></i></button>
+      </div>
+      <div class="ra"><small class="mono">Hrapavost · ilustrativno</small><strong id="ra">Ra 3,2<span>µm</span></strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="about band" id="o-nas">
+  <div class="about-grid">
+    <div><span class="eyebrow mono">Več o Inopolu</span><h2><span class="g">Fino elektropoliranje inoxa</span><br>in celovita obdelava kovin<span class="red">.</span></h2></div>
+    <div class="about-copy">
+      <p>INOPOL smo ustanovili leta 2015 v Grosupljem za galvansko površinsko obdelavo nerjavnih materialov ter izdelavo struženih in rezkanih delov.</p>
+      <p>Z leti smo razširili dejavnost in nadgradili tehnologijo. Danes izvedemo tudi zahtevne projekte, od prvega reza do končne površine.</p>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="fact"><strong>2015</strong><span>Ustanovljeno v Grosupljem</span></div>
+    <div class="fact"><strong>9</strong><span>postopkov obdelave pod eno streho</span></div>
+    <div class="fact"><strong>304<em>·</em>316</strong><span>AISI inox kot osnovni material</span></div>
+    <div class="fact"><strong>1</strong><span>partner od risbe do končne površine</span></div>
+  </div>
+</section>
+
+<section class="services band" id="storitve">
+  <div class="sec-head"><span class="mono">Od risbe do končne površine</span><h2>NAŠE<br>STORITVE<span class="red">.</span></h2></div>
+  <div class="cards">
+    <a class="card" href="#kontakt">
+      <span class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <h3>ELEKTRO&shy;POLIRANJE<span class="red">.</span></h3>
+      <p>Naša osrednja specializacija. Gladka, čista in pasivirana površina inox izdelkov z večjo korozijsko odpornostjo.</p>
+      <div class="meta"><span class="mono">Inox · AISI 304 / 316</span><span class="num">01</span></div>
+    </a>
+    <a class="card" href="#kontakt">
+      <span class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <h3>KEMIČNO ČIŠČENJE<span class="red">.</span></h3>
+      <p>Odstranjevanje oksidov in barve po varjenju ter brušenje inox materialov. Enakomerna osnova za nadaljnjo obdelavo.</p>
+      <div class="meta"><span class="mono">Čiščenje · brušenje</span><span class="num">02</span></div>
+    </a>
+    <a class="card" href="#kontakt">
+      <span class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <h3>STRUŽENJE IN REZKANJE<span class="red">.</span></h3>
+      <p>Natančna mehanska obdelava komponent po vaši tehnični dokumentaciji, od posameznih kosov do serij.</p>
+      <div class="meta"><span class="mono">CNC · po risbi</span><span class="num">03</span></div>
+    </a>
+    <a class="card" href="#kontakt">
+      <span class="arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <h3>PLOČEVINA IN VARJENJE<span class="red">.</span></h3>
+      <p>Izdelava izvlekov, upogibanje pločevine in varjenje po vseh metodah. Sklopi, pripravljeni za končno obdelavo.</p>
+      <div class="meta"><span class="mono">Izvleki · upogibanje</span><span class="num">04</span></div>
+    </a>
+  </div>
+</section>
+
+<section class="products band" id="izdelki">
+  <div class="sec-head"><span class="mono">Kaj vam ponujamo</span><h2>NAŠI<br>IZDELKI<span class="red">.</span></h2></div>
+  <div class="prod-list">
+    <article class="prod">
+      <div class="drawing" aria-hidden="true">
+        <svg viewBox="0 0 440 300">
+          <line class="ax" x1="20" y1="160" x2="290" y2="160"/><line class="ax" x1="150" y1="30" x2="150" y2="290"/>
+          <circle class="ln" cx="150" cy="160" r="110"/><circle class="ln" cx="150" cy="160" r="90"/>
+          <line class="dim" x1="40" y1="22" x2="260" y2="22"/><line class="dim" x1="40" y1="16" x2="40" y2="50"/><line class="dim" x1="260" y1="16" x2="260" y2="50"/>
+          <text class="r" x="150" y="14" text-anchor="middle">Ø D</text>
+          <line class="thin" x1="60" y1="160" x2="240" y2="160"/><text x="196" y="152">Ø d</text>
+          <rect class="ln" x="340" y="50" width="34" height="20"/><rect class="ln" x="340" y="250" width="34" height="20"/>
+          <path class="thin" d="M340 58l8-8M340 66l16-16M346 70l20-20M354 70l20-20M362 70l12-12M340 258l8-8M340 266l16-16M346 270l20-20M354 270l20-20M362 270l12-12"/>
+          <line class="thin" x1="340" y1="70" x2="340" y2="250"/><line class="thin" x1="374" y1="70" x2="374" y2="250"/>
+          <line class="ax" x1="357" y1="36" x2="357" y2="284"/><line class="ax" x1="326" y1="160" x2="390" y2="160"/>
+          <line class="dim" x1="340" y1="288" x2="374" y2="288"/><text class="r" x="384" y="292">h</text>
+          <text x="340" y="36">A–A</text>
+        </svg>
+        <span class="stamp mono">Obroč · prerez A–A</span>
+      </div>
+      <div class="prod-body">
+        <span class="mono">Izdelek 01</span>
+        <h3>INOX OBROČ IN PRIROBNICA<span class="red">.</span></h3>
+        <p>Natančno obdelane inox komponente po meri za industrijo, strojegradnjo in živilski sektor. Mehansko obdelane, brušene, kemično očiščene ali elektropolirane, kot zahteva uporaba.</p>
+        <dl class="spec"><dt>Material</dt><dd>Inox AISI 304 / 316, drugi po dogovoru</dd><dt>Obdelava</dt><dd>Struženje, rezkanje, brušenje, elektropoliranje</dd><dt>Uporaba</dt><dd>Strojegradnja, farmacija, prehrambni sektor</dd></dl>
+      </div>
+    </article>
+    <article class="prod">
+      <div class="drawing" aria-hidden="true">
+        <svg viewBox="0 0 440 300">
+          <path class="ln" d="M110 70 A200 200 0 0 1 310 270"/><path class="ln" d="M110 134 A136 136 0 0 1 246 270"/>
+          <path class="ax" d="M110 102 A168 168 0 0 1 278 270"/>
+          <rect class="ln" x="94" y="58" width="16" height="88"/><rect class="ln" x="234" y="270" width="88" height="16"/>
+          <line class="dim" x1="110" y1="270" x2="229" y2="151"/><circle cx="110" cy="270" r="3" fill="#e2231a"/>
+          <text class="r" x="150" y="226">R</text>
+          <path class="thin" d="M110 230 A40 40 0 0 1 150 270"/><text x="122" y="262">90°</text>
+          <line class="dim" x1="70" y1="70" x2="70" y2="134"/><line class="dim" x1="64" y1="70" x2="90" y2="70"/><line class="dim" x1="64" y1="134" x2="90" y2="134"/>
+          <text class="r" x="30" y="106">DN</text>
+        </svg>
+        <span class="stamp mono">Koleno 90° · pogled</span>
+      </div>
+      <div class="prod-body">
+        <span class="mono">Izdelek 02</span>
+        <h3>CEVNI FITINGI<span class="red">.</span></h3>
+        <p>Kolena, T-kosi, redukcije, spojke in prirobnice za zanesljive cevne sisteme. Po standardnih izvedbah ali po vaši tehnični risbi.</p>
+        <dl class="spec"><dt>Material</dt><dd>Inox AISI 304 / 316, drugi po dogovoru</dd><dt>Izvedba</dt><dd>Standardne dimenzije ali po risbi</dd><dt>Površina</dt><dd>Brušenje, poliranje, elektropoliranje</dd></dl>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="industries" aria-label="Področja uporabe">
+  <span class="eyebrow mono">Kjer se uporablja naše delo</span>
+  <div class="marquee">
+    <span>FARMACIJA<b>•</b></span><span>ŽIVILSKA IN PROCESNA INDUSTRIJA<b>•</b></span><span>STROJEGRADNJA<b>•</b></span><span>AVTOMATIZACIJA<b>•</b></span><span>OPREMA PO NAROČILU<b>•</b></span>
+    <span aria-hidden="true">FARMACIJA<b>•</b></span><span aria-hidden="true">ŽIVILSKA IN PROCESNA INDUSTRIJA<b>•</b></span><span aria-hidden="true">STROJEGRADNJA<b>•</b></span><span aria-hidden="true">AVTOMATIZACIJA<b>•</b></span><span aria-hidden="true">OPREMA PO NAROČILU<b>•</b></span>
+  </div>
+</section>
+
+<section class="quality band" id="kakovost">
+  <div class="q-grid">
+    <div>
+      <span class="eyebrow mono">Kakovost in digitalizacija</span>
+      <h2>MERIMO,<br>KAR OBLJUBIMO<span class="red">.</span></h2>
+      <p class="lead">V projektu digitalne transformacije smo meritve in sledljivost prenesli v digitalno okolje.</p>
+      <p class="eu">Projekt Digitalna transformacija podjetja INOPOL d.o.o. (P4D 2025) delno financira Evropska unija iz Evropskega sklada za regionalni razvoj in proračun RS.</p>
+    </div>
+    <div class="q-list">
+      <div class="q-item"><h3>Digitalni merilec hrapavosti</h3><p>Hrapavost površine izmerimo in zabeležimo, namesto da jo ocenimo na oko.</p></div>
+      <div class="q-item"><h3>Industrijski videoskop</h3><p>Zvare pregledamo tudi v notranjosti cevi in na težko dostopnih mestih.</p></div>
+      <div class="q-item"><h3>Sledljivost v ERP</h3><p>Podatki o naročilu, meritvah in obdelavi so povezani v enem sistemu.</p></div>
+      <div class="q-item"><h3>Laserski razrez s PLC krmiljenjem</h3><p>Optimiziran razrez pomeni manj odpadka in krajše roke.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq band" id="vprasanja">
+  <div class="faq-inner">
+    <div><h2>DOBRO JE<br>VEDETI<span class="red">.</span></h2><p class="lead">Odgovori na vprašanja, s katerimi se začne večina projektov.</p></div>
+    <div>
+      <details open><summary>Kaj naj vključim v povpraševanje?<span class="pm"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4"/></svg></span></summary><p>Najbolj pomagajo tehnična risba ali fotografija, vrsta materiala, dimenzije, količina in želena končna površina. Dodajte še želeni rok.</p></details>
+      <details><summary>Katere materiale obdelujete?<span class="pm"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4"/></svg></span></summary><p>Specializirani smo za nerjavno jeklo (inox), na primer AISI 304 in 316. Obdelujemo tudi druga jekla in neželezne kovine. Primernost postopka preverimo za vsak projekt.</p></details>
+      <details><summary>Kdaj izbrati elektropoliranje?<span class="pm"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4"/></svg></span></summary><p>Kadar inox izdelek potrebuje gladko, higiensko površino in boljšo korozijsko odpornost, na primer v živilski, farmacevtski in procesni industriji.</p></details>
+      <details><summary>Izdelujete tudi komponente po meri?<span class="pm"><svg viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4"/></svg></span></summary><p>Da. Izdelamo kose po vaši dokumentaciji, od struženja in rezkanja do varjenja, in jih po želji tudi površinsko obdelamo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="careers band" id="kariera">
+  <div class="careers-inner">
+    <div><h3>Gradimo ekipo, ki ceni natančnost<span class="red">.</span></h3><p>Proizvodnja · Tehnologija, razvoj in kakovost · Administracija</p></div>
+    <a class="pill glass" href="#kariera">Kariera <svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+  </div>
+</section>
+
+<footer class="cta band" id="kontakt">
+  <div class="cta-grid">
+    <div class="cta-main">
+      <img class="logo" src="assets/logo.png" alt="INOPOL d.o.o.">
+      <h2><span class="g">Imate risbo ali idejo?</span><br>Pogovorimo se<span class="red">.</span></h2>
+      <div class="btn-row"><a class="pill white" href="mailto:info@inopol.si">Pošljite povpraševanje <svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M8 6h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a></div>
+    </div>
+    <div class="col"><h4>Strani</h4><a href="#o-nas">Več o Inopolu</a><a href="#storitve">Tehnologija</a><a href="#izdelki">Naši izdelki</a><a href="#kakovost">Projekti</a><a href="#kariera">Kariera</a></div>
+    <div class="col"><h4>Kontakt</h4><span>info@inopol.si</span><span>+386 41 388 367</span><span>Kosovelova cesta 2<br>1290 Grosuplje, Slovenija</span></div>
+    <div class="col"><h4>Družbena omrežja</h4><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+  </div>
+  <div class="legal mono"><span>© 2026 Inopol d.o.o.</span><span>Matična št. 6808638000 · ID za DDV SI48549967</span></div>
+</footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script>
+// Logo: the PNG is red/black on white. Recolor black → white and drop the white ground so it sits on dark.
+(function(){
+  const clampL=v=>Math.min(1,Math.max(0,v));
+  const src=new Image();
+  src.onload=()=>{
+    const c=document.createElement('canvas');c.width=src.naturalWidth;c.height=src.naturalHeight;
+    const x=c.getContext('2d');x.drawImage(src,0,0);
+    const d=x.getImageData(0,0,c.width,c.height),a=d.data;
+    for(let i=0;i<a.length;i+=4){
+      const r=a[i],g=a[i+1],b=a[i+2],al=a[i+3];
+      if(al<8){a[i+3]=0;continue}
+      if(r-g>50&&r-b>50){a[i]=226;a[i+1]=35;a[i+2]=26}
+      else{const lum=(r+g+b)/3;a[i]=a[i+1]=a[i+2]=255;a[i+3]=al*clampL((235-lum)/120)}
+    }
+    x.putImageData(d,0,0);
+    const url=c.toDataURL();
+    document.querySelectorAll('.logo').forEach(l=>{l.src=url;l.classList.add('ready')});
+  };
+  src.onerror=()=>document.querySelectorAll('.logo').forEach(l=>l.classList.add('ready'));
+  src.src='assets/logo.png';
+})();
+</script>
+<script>
+// Loader: a ring is "machined" around as fonts, the floor, ring textures and the 3D scene arrive.
+(function(){
+  const root=document.documentElement,L=document.getElementById('loader');
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const band=document.getElementById('lrBand'),eo=document.getElementById('lrOut'),ei=document.getElementById('lrIn'),head=document.getElementById('lrHead'),num=document.getElementById('lrNum');
+  const parts={fonts:0,floor:0,tex:0,gl:0},W={fonts:.15,floor:.2,tex:.45,gl:.2};
+  window.inopolProgress=(k,v)=>{parts[k]=Math.max(parts[k],v)};
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(()=>parts.fonts=1);
+  const fl=document.getElementById('floor');
+  if(fl.complete)parts.floor=1;else{fl.addEventListener('load',()=>parts.floor=1);fl.addEventListener('error',()=>parts.floor=1)}
+  const t0=performance.now(),MIN=reduced?300:2600,MAX=9000;let shown=0,done=false;
+  const finish=()=>{
+    if(done)return;done=true;
+    L.classList.add('done');root.classList.remove('is-loading');root.style.overflow='';
+    window.dispatchEvent(new Event('inopol:intro'));
+    setTimeout(()=>{L.hidden=true},reduced?0:1700);
+  };
+  const tick=now=>{
+    if(done)return;
+    const target=Object.keys(W).reduce((s,k)=>s+W[k]*parts[k],0);
+    const cap=Math.min(target,(now-t0)/MIN);
+    shown+=(cap-shown)*(reduced?1:.07);
+    const off=(1-shown).toFixed(4);
+    band.style.strokeDashoffset=off;eo.style.strokeDashoffset=off;ei.style.strokeDashoffset=(1-Math.min(1,shown*1.08)).toFixed(4);
+    head.setAttribute('transform',`rotate(${shown*360} 100 100)`);
+    num.textContent=String(Math.round(shown*100)).padStart(3,'0');
+    if((target>=.999&&shown>.995)||now-t0>MAX){num.textContent='100';finish();return}
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+})();
+</script>
+<script>
+// Scroll reveals, technical drawings that draw themselves, counting figures and pointer-driven hovers.
+(function(){
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const $$=s=>[...document.querySelectorAll(s)];
+  if(!reduced&&'IntersectionObserver' in window)document.documentElement.classList.add('js');
+
+  // stagger siblings inside each group
+  const groups=['.sec-head','.about-grid','.facts','.cards','.prod-list','.q-list','.faq-inner>div:last-child','.careers-inner','.cta-grid','.industries'];
+  groups.forEach(g=>$$(g).forEach(box=>[...box.children].forEach((el,i)=>{el.classList.add('rv');el.style.setProperty('--d',(i*.09).toFixed(2)+'s')})));
+  $$('main section:not(.stage-wrap) h2, footer h2').forEach(h=>{h.classList.remove('rv');h.classList.add('rh')});
+  $$('.about-copy p, .quality .lead, .quality .eu, .faq .lead, .eyebrow').forEach((el,i)=>{el.classList.add('rv');el.style.setProperty('--d','.15s')});
+
+  // technical drawings: every stroked shape draws in, in document order
+  $$('.drawing').forEach(d=>{
+    d.querySelectorAll('.ln,.dim,.thin').forEach((s,i)=>{s.setAttribute('pathLength','1');s.style.setProperty('--d',(i*.07).toFixed(2)+'s')});
+  });
+
+  // counters: digits in .fact strong count up when the row appears
+  const count=el=>{
+    const nodes=[];const walk=n=>{n.childNodes.forEach(c=>{if(c.nodeType===3&&/\d/.test(c.nodeValue))nodes.push(c);else if(c.nodeType===1)walk(c)})};walk(el);
+    nodes.forEach(n=>{
+      const target=+n.nodeValue.trim(),from=target>1900?1985:0,t0=performance.now(),dur=1700;
+      const step=now=>{const k=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-k,4);n.nodeValue=String(Math.round(from+(target-from)*e));if(k<1)requestAnimationFrame(step)};
+      n.nodeValue=String(from);requestAnimationFrame(step);
+    });
+  };
+
+  if(document.documentElement.classList.contains('js')){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{
+      if(!e.isIntersecting)return;
+      const el=e.target;el.classList.add('in');io.unobserve(el);
+      // once revealed, hand the element back to its own hover transitions
+      if(el.classList.contains('rv'))setTimeout(()=>el.classList.remove('rv','in'),1300+parseFloat(el.style.getPropertyValue('--d')||0)*1000);
+      if(e.target.classList.contains('fact'))count(e.target.querySelector('strong'));
+    }),{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+    $$('.rv,.rh,.drawing').forEach(el=>io.observe(el));
+  }
+
+  // FAQ: wrap question text so it can slide on hover
+  $$('summary').forEach(s=>{const t=s.firstChild;if(t&&t.nodeType===3){const q=document.createElement('span');q.className='q';q.textContent=t.nodeValue;s.replaceChild(q,t)}});
+
+  if(!fine||reduced)return;
+  // service cards tilt toward the pointer
+  $$('.card').forEach(c=>{
+    c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      c.style.setProperty('--ry',((x-.5)*8).toFixed(2)+'deg');c.style.setProperty('--rx',((.5-y)*8).toFixed(2)+'deg');
+      c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%')});
+    c.addEventListener('pointerleave',()=>{c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
+  });
+  // drawings drift slightly with the pointer
+  $$('.prod').forEach(p=>{const svg=p.querySelector('.drawing svg');
+    p.addEventListener('pointermove',e=>{const r=p.getBoundingClientRect();svg.style.transform=`translate(${((e.clientX-r.left)/r.width-.5)*-14}px,${((e.clientY-r.top)/r.height-.5)*-10}px)`});
+    p.addEventListener('pointerleave',()=>svg.style.transform='')});
+  // magnetic buttons
+  $$('.pill').forEach(b=>{
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.22}px,${(e.clientY-r.top-r.height/2)*.3}px)`});
+    b.addEventListener('pointerleave',()=>b.style.transform='')});
+})();
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const ease=t=>{t=clamp(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+const mix=(a,b,t)=>a+(b-a)*t;
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- smooth scroll + header ---------- */
+let lenis=null;
+if(!reduced&&window.Lenis){try{lenis=new Lenis({lerp:.09,wheelMultiplier:.9})}catch(e){lenis=null}}
+const wrap=$('.stage-wrap'),stage=$('#stage'),hdr=$('#hdr');
+// intro: hold the page while the loader runs, then let the ring arrive
+let introStart=-1;
+if(document.documentElement.classList.contains('is-loading')){lenis?.stop();addEventListener('inopol:intro',()=>{lenis?.start();introStart=performance.now()},{once:true})}
+else introStart=0;
+const range=()=>wrap.offsetHeight-stage.clientHeight;
+const goTo=p=>{const y=wrap.offsetTop+p*range();lenis?lenis.scrollTo(y,{duration:1.6}):scrollTo({top:y,behavior:reduced?'auto':'smooth'})};
+$$('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(+b.dataset.go)));
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const id=a.getAttribute('href');if(id.length<2)return e.preventDefault();
+  const t=$(id);if(!t)return;e.preventDefault();hdr.classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');
+  lenis?lenis.scrollTo(t,{duration:1.6}):t.scrollIntoView({behavior:reduced?'auto':'smooth'});
+}));
+$('#menuBtn').addEventListener('click',()=>{const o=hdr.classList.toggle('open');$('#menuBtn').setAttribute('aria-expanded',String(o));$('#menuBtn').textContent=o?'Zapri ×':'Meni +'});
+
+let gloss=0;
+$$('[data-gloss]').forEach(b=>b.addEventListener('click',()=>{gloss=+b.dataset.gloss;$$('[data-gloss]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}));
+
+/* ---------- three.js ---------- */
+const canvas=$('#gl'),refl=$('#refl'),rctx=refl.getContext('2d');
+const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.92;
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(28,1,.1,100);camera.position.set(0,0,12);
+const VH=2*12*Math.tan(THREE.MathUtils.degToRad(14)); // visible height at z=0
+
+// Studio environment: black room with softbox strips, one warm horizon line and a faint red kicker.
+function studio(){
+  const s=new THREE.Scene();s.background=new THREE.Color(0x000000);
+  const strip=(w,h,v,pos,rot,col=0xffffff)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(col).multiplyScalar(v),side:THREE.DoubleSide}));m.position.set(...pos);m.rotation.set(...rot);s.add(m)};
+  strip(12,5,2.2,[0,6,0],[Math.PI/2,0,0]);          // big top softbox: gives matte steel its broad sheen
+  strip(.7,9,7,[-6,0,1.5],[0,Math.PI/2,0]);
+  strip(4,9,.9,[-5.5,0,-3],[0,Math.PI/3,0]);         // wide soft fill beside the strip
+  strip(.35,9,4.5,[6.5,0,-1],[0,-Math.PI/2,0]);
+  strip(16,.22,6,[0,.4,-7],[0,0,0],0xfff3e8);
+  strip(10,5,.75,[0,0,8],[0,Math.PI,0]);
+  strip(.12,4,1.1,[-4,0,-6],[0,.5,0],0xe2231a);
+  strip(30,30,.08,[0,-3.2,0],[-Math.PI/2,0,0]);
+  return s;
+}
+const pmrem=new THREE.PMREMGenerator(renderer);
+scene.environment=pmrem.fromScene(studio(),.035).texture;
+
+// Ring: rectangular section with rounded edges, proportions taken from the client's model (Ø 1086, wall 94, depth 169).
+function ringGeometry(R=1,r=.818,d=.31,b=.02,seg=7){
+  const pts=[],corner=(cx,cy,a0)=>{for(let i=0;i<=seg;i++){const a=a0+i/seg*Math.PI/2;pts.push(new THREE.Vector2(cx+Math.cos(a)*b,cy+Math.sin(a)*b))}};
+  corner(R-b,-d/2+b,-Math.PI/2);corner(R-b,d/2-b,0);corner(r+b,d/2-b,Math.PI/2);corner(r+b,-d/2+b,Math.PI);
+  pts.push(pts[0].clone());
+  const g=new THREE.LatheGeometry(pts,260);g.rotateX(Math.PI/2);g.computeVertexNormals();return g;
+}
+const geo=ringGeometry();
+
+const tl=new THREE.TextureLoader();
+let texDone=0;const texTick=()=>{texDone++;window.inopolProgress?.('tex',texDone/3)};
+const tex=n=>{const t=tl.load(`assets/${n}`,texTick,undefined,texTick);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=8;return t};
+const uniforms={
+  tRaw:{value:tex('tex3.jpg')},tMatte:{value:tex('tex4.jpg')},tPol:{value:tex('tex1.jpg')},
+  uStage:{value:2},uGloss:{value:0},uGlow:{value:0},uTime:{value:0},uBump:{value:.06}
+};
+const mat=new THREE.MeshStandardMaterial({color:0xffffff,metalness:1,roughness:.3,side:THREE.DoubleSide,envMapIntensity:.95});
+mat.onBeforeCompile=sh=>{
+  Object.assign(sh.uniforms,uniforms);
+  sh.vertexShader=sh.vertexShader
+    .replace('#include <common>','#include <common>\nvarying vec3 vObj;varying vec3 vObjN;')
+    .replace('#include <begin_vertex>','#include <begin_vertex>\nvObj=position;vObjN=normal;');
+  sh.fragmentShader=sh.fragmentShader
+    .replace('#include <common>',`#include <common>
+      varying vec3 vObj;varying vec3 vObjN;
+      uniform sampler2D tRaw,tMatte,tPol;uniform float uStage,uGloss,uGlow,uTime,uBump;
+      float wipeMask(float t,float c,out float edge){float f=mix(-.12,1.12,t);edge=1.-clamp(abs(c-f)/.035,0.,1.);return 1.-smoothstep(f-.05,f+.05,c);}
+      vec3 bumpN(vec3 p,vec3 n,vec2 dH,float fd){vec3 sx=dFdx(p),sy=dFdy(p),r1=cross(sy,n),r2=cross(n,sx);float det=dot(sx,r1)*fd;vec3 g=sign(det)*(dH.x*r1+dH.y*r2);return normalize(abs(det)*n-g);}`)
+    .replace('#include <color_fragment>',`#include <color_fragment>
+      // planar on the faces, wrapped around the band: like turning marks on a lathe
+      vec2 tuv=abs(vObjN.z)>.55?vObj.xy*.46+.5:vec2(atan(vObj.y,vObj.x)/6.2831853*4.,vObj.z*.9+.5);
+      float rR=texture2D(tRaw,tuv).r,rM=texture2D(tMatte,tuv).r,rP=texture2D(tPol,tuv).r;
+      float wc=.5+.5*vObj.x+.06*(rM-.5);
+      float e1,e2;
+      float m1=wipeMask(clamp(uStage,0.,1.),wc,e1),m2=wipeMask(clamp(uStage-1.,0.,1.),wc,e2);
+      // raw: turning grooves (rings on the faces, lines around the band); matte: fine pickled grain
+      float rc=abs(vObjN.z)>.55?length(vObj.xy):vObj.z;
+      float gw=fwidth(rc*700.),gAmp=1.-smoothstep(.6,2.2,gw);
+      float groove=(sin(rc*700.)*.5+.5)*.7+(sin(rc*190.+rR*3.)*.5+.5)*.3;
+      float grain=texture2D(tMatte,tuv*3.1).r;
+      vec3 cR=vec3(.55,.56,.57),cM=vec3(.70,.71,.72),cP=vec3(.90,.88,.86);
+      float gR=.24+rR*.25+groove*gAmp*.1,gM=.42+grain*.22,gP=mix(.16+rP*.22,.06+rP*.08,uGloss);
+      float kR=1.,kM=1.,kP=1.;
+      // micro relief only on raw and matte; the polished surface stays optically smooth (no sparkle)
+      float hgt=mix(mix(groove*gAmp*.5+rR*.1,grain*.35,m1),0.,m2);
+      vec3 col=mix(mix(cR,cM,m1),cP,m2);
+      float rough=mix(mix(gR,gM,m1),gP,m2);
+      float metal=mix(mix(kR,kM,m1),kP,m2);
+      float edge=max(e1*step(.001,uStage)*step(uStage,.999),e2*step(1.001,uStage)*step(uStage,1.999));
+      diffuseColor.rgb=col;`)
+    .replace('#include <roughnessmap_fragment>','float roughnessFactor=clamp(rough,.02,1.);')
+    .replace('#include <metalnessmap_fragment>','float metalnessFactor=metal;')
+    .replace('#include <normal_fragment_maps>','#include <normal_fragment_maps>\nnormal=bumpN(-vViewPosition,normal,vec2(dFdx(hgt),dFdy(hgt))*uBump,faceDirection);')
+    .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance+=vec3(1.,.93,.86)*edge*uGlow*1.6;');
+};
+
+const group=new THREE.Group(),inner=new THREE.Group();
+const ring=new THREE.Mesh(geo,mat);inner.add(ring);group.add(inner);scene.add(group);
+const N=9,stack=new THREE.InstancedMesh(geo,mat,N);stack.visible=false;group.add(stack);
+const dummy=new THREE.Object3D();
+
+/* ---------- keyframes over scroll progress p ---------- */
+// x,y in viewport fractions (y up), D ring diameter as fraction of viewport height, yaw/tilt/roll in radians
+let W=1,H=1,mobile=false,horizon=.6;
+function states(){
+  const a=W/H;mobile=a<.8;
+  const Dmax=mobile?Math.min(.5,.82*a):Math.min(.74,.5*a);
+  const heroD=mobile?Math.min(.27,.66*a):Math.min(.6,.42*a);
+  const heroY=mobile?.5-(horizon+.025)+heroD/2:.5-(horizon+.05)+heroD/2;
+  return{
+    hero:{x:mobile?.1:.2,y:heroY,D:heroD,yaw:-.62,tilt:.06,roll:.14},
+    front:{x:0,y:mobile?.12:.01,D:Dmax,yaw:0,tilt:0,roll:0},
+    quarter:{x:mobile?0:.16,y:mobile?.13:.02,D:Dmax*.9,yaw:-.78,tilt:.1,roll:.16},
+    polish:{x:mobile?0:.16,y:mobile?.13:.02,D:Dmax*.92,yaw:-.3,tilt:-.12,roll:.05},
+    series:{x:mobile?-.18:.04,y:mobile?.16:.02,D:mobile?.3:.44,yaw:-.95,tilt:.1,roll:.04}
+  };
+}
+let S=states();
+const KEYS=()=>[[0,S.hero],[.09,S.hero],[.24,S.front],[.41,S.front],[.5,S.quarter],[.61,S.quarter],[.7,S.polish],[.82,S.polish],[.93,S.series],[1,S.series]];
+function stateAt(p){
+  const k=KEYS();
+  for(let i=0;i<k.length-1;i++){const[p0,a]=k[i],[p1,b]=k[i+1];if(p<=p1){const t=ease((p-p0)/(p1-p0||1));const o={};for(const n in a)o[n]=mix(a[n],b[n],t);return o}}
+  return k[k.length-1][1];
+}
+const seg=(p,a,b)=>clamp((p-a)/(b-a));
+// surface stage: polished hero → back to raw → matte → polished
+const stageAt=p=>p<.24?2-2*ease(seg(p,.1,.24)):p<.5?ease(seg(p,.42,.5)):1+ease(seg(p,.62,.7));
+
+function resize(){
+  W=stage.clientWidth;H=stage.clientHeight;
+  renderer.setSize(W,H,false);camera.aspect=W/H;camera.updateProjectionMatrix();
+  refl.width=Math.round(W/2);refl.height=Math.round(H/2);
+  // on phones the floor sits lower, so the copy and the ring each get their own band of the screen
+  const fl=$('#floor'),imgA=2600/1100,top=(W/H<.8?.36:.22)*H,ih=Math.max(H,W/imgA);
+  horizon=(top+.415*ih)/H; // where the floor's light line sits
+  fl.style.top=top+'px';
+  stage.style.setProperty('--hz',(horizon*H).toFixed(1)+'px');
+  S=states();
+}
+addEventListener('resize',resize);resize();
+
+/* ---------- callouts ---------- */
+const CALL={
+  hero:['Natančnost v vsakem sloju','Inox AISI 316L',140,-25],
+  c0:['Struženje in rezkanje','Mere po tehnični risbi',196,16],
+  c1:['Kemično čiščenje','Brez oksidov in sledi',160,-20],
+  c2:['Elektropoliranje','Večja korozijska odpornost',150,-30]
+};
+const tagA=$('#tagA'),tagB=$('#tagB'),lnA=$('#lnA'),lnB=$('#lnB');
+let callKey='hero',callTimer=0;
+function setCall(k){
+  if(k===callKey)return;callKey=k;
+  [tagA,tagB,lnA,lnB].forEach(e=>e.classList.add('off'));clearTimeout(callTimer);
+  if(!k)return;
+  callTimer=setTimeout(()=>{tagA.textContent=CALL[k][0];tagB.textContent=CALL[k][1];[tagA,tagB,lnA,lnB].forEach(e=>e.classList.remove('off'))},420);
+}
+const v3=new THREE.Vector3();
+function project(angleDeg){
+  const a=THREE.MathUtils.degToRad(angleDeg);
+  v3.set(Math.cos(a),Math.sin(a),.155);ring.localToWorld(v3);v3.project(camera);
+  return[(v3.x*.5+.5)*W,(-v3.y*.5+.5)*H];
+}
+function drawCall(cx,cy,D){
+  if(!callKey)return;
+  const c=CALL[callKey],r=D*H/2;
+  const [ax,ay]=project(c[2]),[bx,by]=project(c[3]);
+  const wa=tagA.offsetWidth,ha=tagA.offsetHeight,wb=tagB.offsetWidth;
+  let lx=Math.max(16,ax-(mobile?40:110)-wa),ly=ay-(mobile?60:48);
+  let rx=Math.min(W-16-wb,bx+(mobile?20:80)),ry=by+(mobile?56:64);
+  if(mobile){lx=16;rx=W-16-wb}
+  tagA.style.transform=`translate(${lx}px,${ly-ha/2}px)`;
+  tagB.style.transform=`translate(${rx}px,${ry-ha/2}px)`;
+  lnA.querySelector('polyline').setAttribute('points',`${lx+wa},${ly} ${ax-24},${ly} ${ax},${ay}`);
+  lnA.querySelector('circle').setAttribute('cx',ax);lnA.querySelector('circle').setAttribute('cy',ay);
+  lnB.querySelector('polyline').setAttribute('points',`${bx},${by} ${bx+20},${ry} ${rx},${ry}`);
+  lnB.querySelector('circle').setAttribute('cx',bx);lnB.querySelector('circle').setAttribute('cy',by);
+}
+
+/* ---------- copy layers ---------- */
+const L={hero:$('#hero'),cue:$('#cue'),c0:$('#ch0'),c1:$('#ch1'),c2:$('#ch2'),echo:$('#echo'),ui:$('#storyUi')};
+const vis=(el,on)=>el.classList.toggle('off',!on);
+const chapBtns=$$('[data-c]'),raEl=$('#ra'),glow=$('#glow'),floor=$('#floor');
+const fmt=v=>v.toFixed(v<1?2:1).replace('.',',');
+
+/* ---------- loop ---------- */
+let p=0,ps=0,mx=0,my=0,mxs=0,mys=0,glossS=0,running=true,first=true;
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
+new IntersectionObserver(([e])=>{running=e.isIntersecting},{rootMargin:'100px'}).observe(wrap);
+
+const clock=new THREE.Clock();
+function frame(now){
+  requestAnimationFrame(frame);
+  if(lenis)lenis.raf(now);
+  const r=wrap.getBoundingClientRect();
+  p=clamp(-r.top/(r.height-H));
+  hdr.classList.toggle('compact',scrollY>40);
+  if(!running&&!first)return;
+  const dt=Math.min(clock.getDelta(),.05),t=clock.elapsedTime;
+  const k=reduced?1:1-Math.pow(.0009,dt);
+  ps+=(p-ps)*k;mxs+=(mx-mxs)*k*.6;mys+=(my-mys)*k*.6;glossS+=(gloss-glossS)*(reduced?1:1-Math.pow(.02,dt));
+
+  const s=stateAt(ps),D=s.D;
+  const intro=reduced||introStart===0?1:introStart<0?0:ease(clamp((now-introStart-250)/1900));
+  s.yaw+=(1-intro)*-2.2;s.tilt+=(1-intro)*.5;
+  const scale=D*VH/2*mix(.55,1,intro);
+  group.position.set(s.x*VH*camera.aspect,s.y*VH,0);
+  group.scale.setScalar(scale);
+  const idle=reduced?0:1;
+  const spin=seg(ps,.66,.84)*(1-seg(ps,.84,.93));
+  inner.rotation.set(s.tilt+mys*.12*idle+Math.sin(t*.5)*.02*idle,s.yaw+mxs*.22*idle+Math.sin(t*.35)*.05*idle+spin*Math.sin(t*.45)*.35*idle,s.roll);
+
+  // series: identical rings line up behind the first one, receding into depth like parts on a line
+  const e=seg(ps,.83,.97);
+  stack.visible=e>.002;
+  if(stack.visible){
+    for(let i=1;i<N;i++){
+      const k=ease(clamp(e*1.6-(i-1)*.08));   // each ring slides in a beat after the previous one
+      dummy.position.set(i*.95*k,0,-i*1.55*k);
+      dummy.rotation.copy(inner.rotation);
+      dummy.scale.setScalar(k>.001?1:0);
+      dummy.updateMatrix();stack.setMatrixAt(i,dummy.matrix);
+    }
+    dummy.scale.setScalar(0);dummy.updateMatrix();stack.setMatrixAt(0,dummy.matrix);
+    stack.instanceMatrix.needsUpdate=true;
+  }
+
+  uniforms.uStage.value=stageAt(ps);
+  uniforms.uGloss.value=glossS;
+  uniforms.uGlow.value=(seg(ps,.42,.5)>0&&seg(ps,.42,.5)<1)||(seg(ps,.62,.7)>0&&seg(ps,.62,.7)<1)?1:0;
+  if(scene.environmentRotation)scene.environmentRotation.y=t*.06*idle+mxs*.5;
+
+  renderer.render(scene,camera);
+
+  // screen-space helpers
+  const cx=(s.x+.5)*W,cy=(.5-s.y)*H,bottom=cy+D*H/2;
+  const floorO=1-seg(ps,.08,.2);
+  floor.style.opacity=floorO;
+  refl.style.opacity=(.42*floorO).toFixed(3);
+  if(floorO>.01){
+    const m=bottom/H;refl.style.setProperty('--my',(m*100).toFixed(2)+'%');
+    rctx.setTransform(1,0,0,1,0,0);rctx.clearRect(0,0,refl.width,refl.height);rctx.setTransform(1,0,0,-1,0,refl.height*2*m);
+    rctx.drawImage(canvas,0,0,refl.width,refl.height);
+  }
+  const gO=seg(ps,.18,.26)*(1-seg(ps,.84,.9));
+  glow.style.opacity=gO.toFixed(3);
+  glow.style.width=(D*H*.95)+'px';
+  glow.style.transform=`translate(${cx-D*H*.475}px,${bottom+D*H*.08-30}px)`;
+
+  vis(L.hero,ps<.1);vis(L.cue,ps<.05);
+  vis(L.c0,ps>.25&&ps<.42);vis(L.c1,ps>.5&&ps<.62);vis(L.c2,ps>.7&&ps<.84);
+  vis(L.echo,ps>.88);vis(L.ui,ps>.2&&ps<.86);
+  setCall(ps<.1?'hero':ps>.25&&ps<.42?'c0':ps>.5&&ps<.62?'c1':ps>.7&&ps<.84?'c2':null);
+  drawCall(cx,cy,D);
+
+  const ch=[seg(ps,.22,.45),seg(ps,.45,.65),seg(ps,.65,.85)];
+  chapBtns.forEach((b,i)=>{b.querySelector('i').style.setProperty('--f',ch[i].toFixed(3));b.classList.toggle('on',ch[i]>0&&ch[i]<1)});
+  const st=uniforms.uStage.value,ra=ps<.24?3.2:st<1?mix(3.2,1.6,st):mix(1.6,mix(.4,.1,glossS),st-1);
+  raEl.firstChild.nodeValue='Ra '+fmt(ra);
+
+  if(first){first=false;window.inopolProgress?.('gl',1)}
+  if(intro>.02)canvas.classList.add('ready');
+}
+requestAnimationFrame(frame);
+</script>
+
+</body>
+</html>
